@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 5</title>
+</head>
+
+<body>
+    <p>Estado civil:</p>
+
+    <label for="solteiro">Solteiro:</label>
+    <input type="radio" name="estado_civil" id="solteiro" value="1">
+
+    <label for="casado">Casado:</label>
+    <input type="radio" name="estado_civil" id="casado" value="2">
+
+    <label for="divorciado">Divorciado:</label>
+    <input type="radio" name="estado_civil" id="divorciado" value="3">
+
+    <label for="viuvo">Viúvo:</label>
+    <input type="radio" name="estado_civil" id="viuvo" value="4">
+
+    <button onclick="ex_05()">Clicar!</button>
+
+    <script>
+        function ex_05() {
+
+            // Mostra qual é a opção selecionada
+            var nodes = document.getElementsByName("estado_civil");
+
+            for (var i = 0; i < nodes.length; i++) {
+                if (nodes[i].checked) {
+                    window.alert(nodes[i].id);
+                    break;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

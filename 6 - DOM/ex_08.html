@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 8</title>
+</head>
+<body>
+    <p>Lista de tarefas:</p>
+    <label for="tarefa">Tarefa:</label>
+    <input type="text" name="tarefa" id="tarefa" autofocus>
+    <button onclick="ex_08()">Incluir</button>
+    <ul></ul>
+
+    <script>
+        function ex_08(){
+            
+            // Acrescenta um novo item de lista
+            var elemento = document.createElement("li");
+            var texto = document.createTextNode(document.getElementById("tarefa").value);
+
+            elemento.appendChild(texto);
+
+            var elemento_pai = document.getElementsByTagName("ul")[0];
+
+            elemento_pai.appendChild(elemento);
+
+            document.getElementById("tarefa").value = "";
+            document.getElementById("tarefa").focus();
+        }
+    </script>
+</body>
+</html>

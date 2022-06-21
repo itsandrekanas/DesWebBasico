@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 4</title>
+</head>
+<body>
+    <p>Lista de tarefas:</p>
+    <label for="tarefa">Tarefa:</label>
+    <input type="text" name="tarefa" id="tarefa" autofocus>
+    <button onclick="ex_04()">Incluir</button>
+    <ol id="lista">
+        
+        
+    </ol>
+
+    <script>
+        function ex_04(){
+            
+            var lista = document.getElementById("lista")
+            var elemento = document.createElement("li");
+            elemento.innerHTML += document.getElementById("tarefa").value + '<button onclick="ex_04_p2(this.parentElement)">Destacar</button><button onclick="ex_04_p3(this.parentElement)">Remover</button>';
+
+            lista.appendChild(elemento);
+
+            var elemento_pai = document.getElementsByTagName("ol")[0];
+
+            elemento_pai.appendChild(elemento);
+
+            document.getElementById("tarefa").value = "";
+            document.getElementById("tarefa").focus();
+        }
+
+        function ex_04_p2(e){    
+        e.style.color = "red";
+    }
+
+    function ex_04_p3(e){
+        e.parentNode.removeChild(e);   
+    }
+    </script>
+</body>
+</html>

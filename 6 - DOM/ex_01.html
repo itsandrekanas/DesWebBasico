@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 1</title>
+</head>
+<body>
+    <p id="info"><i>Um parágrafo simples.</i></p>
+    <button onclick="ex_01()">Clicar!</button>
+
+    <script>
+        function ex_01(){
+            
+            // Seleciona o elemento pelo id
+            var elemento = document.getElementById("info");
+            window.alert(elemento.innerHTML);
+        }
+    </script>
+</body>
+</html>

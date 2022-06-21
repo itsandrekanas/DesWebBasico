@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 7</title>
+</head>
+<body>
+    <button onclick="ex_07()">Clicar!</button>
+
+    <script>
+        function ex_07(){
+            
+            // Cria um novo parágrafo no documento, acima do botão
+            var elemento_pai = document.body;
+            var elemento = document.createElement("p");
+            var texto = document.createTextNode("Um parágrafo qualquer...")
+
+            elemento.appendChild(texto);
+         
+            elemento_pai.insertBefore(elemento, document.getElementsByTagName("button")[0]);
+
+            document.getElementsByTagName("button")[0].disabled = true;
+        }
+    </script>
+</body>
+</html>
